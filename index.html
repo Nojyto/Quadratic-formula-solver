@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Quadratic formula calculator</title>
+    <link rel="icon" href="dependencies/img/favicon.png"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="https://www.desmos.com/api/v1.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script defer src="js/script.js"></script>
+<body>
+    <header>
+        <img src="dependencies/img/icon.png" alt="icon.png">
+        <a href="#" class="button" id="compute">Compute</a>
+        <a href="#" class="button" id="resetLog">Clear log</a>
+    </header>
+    <main>
+        <section class="flexContainer">
+            <input type="number" id="a" placeholder="a" oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); if(this.value.length <= this.maxLength) this.style.width = 1.5 + this.value.length + 'ch';" spellcheck="false" maxlength = "5" tabindex="1">
+            <h1>x<sup>2</sup>+</h1>
+            <input type="number" id="b" placeholder="b" oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); if(this.value.length <= this.maxLength) this.style.width = 1.5 + this.value.length + 'ch';" spellcheck="false" maxlength = "5" tabindex="2">
+            <h1>x+</h1>
+            <input type="number" id="c" placeholder="c" oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); if(this.value.length <= this.maxLength) this.style.width = 1.5 + this.value.length + 'ch';" spellcheck="false" maxlength = "5" tabindex="3">
+            <h1>= 0</h1>
+        </section>
+        <section id="UI">
+            <h2 id="factored">a(x - <var>x<sub>1</sub></var>)(x - <var>x<sub>2</sub></var>) = 0</h2>
+            <h2><var>D</var>=<var id="B">b<sup>2</sup></var><var id="4AC">-4ac</var>=<var id="D">?</var></h2>
+            <section id="awns">
+                <h2><var>x<sub>1,2</sub>=</var>  
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <var id="-B">-b</var><var id="rD">±√D</var>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="divider">--------------</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <var id="2A">2a</var>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <var id="x">= {<var>x<sub>1</sub> ; <var>x<sub>2</sub>}</var></h2>
+                <h2><var>x<sub>v</sub>=</var>  
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <var>-b</var>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="divider">-----</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <var>2a</var>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <var id="xv"></var></h2>
+                <h2><var>y<sub>v</sub>=</var>  
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <var>-b<sup>2</sup></var>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="divider">-----</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <var>4a</var>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <var>+c</var>
+                <var id="yv"></var></h2>
+            </section>
+        </section>
+        <section class="flexContainer">
+            <div id="calculator"></div>
+        </section>
+        
+        <audio autoplay loop>
+            <source src="dependencies/audio/01-oblivion.mp3" type="audio/mp3">
+        </audio>
+    </main>
+    <footer>
+        <p>Copyright © 2021 All rights reserved by Nojyto.</p>
+    </footer>
+</body>
+</html>

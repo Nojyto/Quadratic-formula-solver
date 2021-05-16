@@ -1,0 +1,36 @@
+@import "_config.scss";
+@import "_utilities.scss";
+@import "_media.scss";
+
+html {
+    background-color: $darkgrey;
+    scroll-behavior: smooth;
+}
+
+header {
+    @extend .headerfooter;
+    @extend .flexContainer;
+    justify-content: flex-start;
+    opacity: 98.5%;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    img {
+        margin: 8px;
+        height: 48px;
+    }
+}
+
+main {
+    margin: 96px 20px 64px 20px;
+    min-height: 940px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px $fullblack;
+    background-color: $black;
+}
+
+footer {
+    @extend .headerfooter;
+    @extend .flexContainer;
+    bottom: 0;
+}

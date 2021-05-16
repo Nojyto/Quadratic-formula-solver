@@ -1,0 +1,166 @@
+.flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerfooter {
+    width: 100%;
+    height: 64px;
+    background-color: $black;
+    box-shadow: 0 0 15px $fullblack;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+a.button{
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid$white;
+    margin-right: 8px;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color:$white;
+    text-align: center;
+    transition: all 0.2s;
+    &:hover{
+        color: $black;
+        background-color:$white;
+    }
+}
+
+input[type=number] {
+    @extend .flexContainer;
+    color: $black;
+    cursor: pointer;
+    border: solid 1.5px $fullblack;
+    width: 2.5ch;
+    min-width: 2.5ch;
+    height: 70px;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 200;
+    border-radius: 6px;
+    text-shadow: 1px 0 0 $black,
+                0 -1px 0 $black,
+                 0 1px 0 $black,
+                -1px 0 0 $black;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+    -moz-appearance: textfield;
+    &:hover{
+        box-shadow: 0 0 5pt 0.5pt$white;
+    }
+    &:focus {
+        box-shadow: 0 0 5pt 2pt$white;
+        outline-width: 0px;
+        text-shadow: 0px 0px 0px $darkgrey;
+        /*color: transparent;*/
+    }
+    &::placeholder{
+        text-shadow: 0px 0px 0px $black;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+h1 {
+    @extend .noselect;
+    margin-bottom: 8px;
+    color:$white;
+    font-weight: 300;
+    font-size: 80px;
+    text-shadow: 1px 0 0 $black,
+                0 -1px 0 $black,
+                 0 1px 0 $black,
+                -1px 0 0 $black;
+    
+    sup, sub {
+        font-size: 1.4rem;
+    }
+}
+
+h2 {
+    @extend h1;
+    font-size: 50px;
+}
+
+p {
+    @extend .noselect;
+    color:$white;
+    font-size: 18px;
+    text-shadow: 1px 0 0 $black,
+                0 -1px 0 $black,
+                 0 1px 0 $black,
+                -1px 0 0 $black;
+}
+
+table, td, h2 {
+    @extend .flexContainer;
+}
+
+.divider {
+    vertical-align: baseline;
+    letter-spacing: -0.15em;
+    margin-right: 7px;
+    margin-left: 7px;
+    line-height: 0.1em;
+    height: 0.1em;
+}
+
+.tooltip {
+    @extend p;
+    position: relative;
+    display: inline-block;
+    .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: $grey;
+        color:$white;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: $grey transparent transparent transparent;
+        }
+    }
+    &:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+#calculator {
+    width: 550px;
+    height: 350px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}

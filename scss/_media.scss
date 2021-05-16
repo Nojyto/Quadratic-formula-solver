@@ -1,0 +1,39 @@
+@media (max-width: 688px) {
+    header{
+        p{
+            display: none;
+        }
+    }
+
+    input[type=number] {
+        width: 1.75ch;
+        min-width: 1.75ch;
+        height: 40px;
+        font-size: 35px;
+        font-weight: 200;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    #calculator {
+        width: 300px;
+        height: 350px;
+        margin: 0px;
+    }
+
+    main {
+        min-height: 750px;
+    }
+
+    footer{
+        p{
+            font-size: 15.5px;
+        }
+    }
+}
